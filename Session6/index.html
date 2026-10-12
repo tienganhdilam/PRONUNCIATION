@@ -1,77 +1,176 @@
-
+```html
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Session 6 - Pronunciation Practice</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #f4f7fb;
-      color: #243047;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 6 - Pronunciation Practice</title>
 
-    h1 {
-      text-align: center;
-      color: #2457a7;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    p {
-      text-align: center;
-      line-height: 1.6;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #243247;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 25px 16px;
+        }
 
-    .lesson {
-      display: block;
-      background: white;
-      padding: 18px 20px;
-      margin: 14px 0;
-      border-radius: 12px;
-      border: 1px solid #dce5f2;
-      text-decoration: none;
-      color: #2457a7;
-      font-size: 18px;
-      font-weight: bold;
-    }
+        h1 {
+            text-align: center;
+            color: #2457a7;
+            margin-bottom: 8px;
+        }
 
-    .lesson:hover {
-      background: #e8f0ff;
-    }
+        .subtitle {
+            text-align: center;
+            color: #66758a;
+            margin-bottom: 30px;
+        }
 
-    .back {
-      display: inline-block;
-      margin-top: 20px;
-      color: #2457a7;
-      text-decoration: none;
-    }
-  </style>
+        .lesson-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .lesson {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 18px;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #dce5f1;
+            text-decoration: none;
+            color: inherit;
+            transition: 0.2s;
+        }
+
+        .lesson:hover {
+            border-color: #4b83df;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 14px #1b3b6614;
+        }
+
+        .number {
+            min-width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e4efff;
+            color: #2457a7;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .lesson-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .lesson-title {
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .filename {
+            font-size: 13px;
+            color: #718096;
+            overflow-wrap: anywhere;
+        }
+
+        .arrow {
+            font-size: 24px;
+            color: #4b83df;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #8793a5;
+            font-size: 13px;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 18px 12px;
+            }
+
+            .lesson {
+                padding: 14px;
+                gap: 10px;
+            }
+
+            .number {
+                min-width: 40px;
+                height: 40px;
+                font-size: 17px;
+            }
+
+            .lesson-title {
+                font-size: 15px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <h1>SESSION 6 – VOWEL PRACTICE</h1>
-  <p>Choose an exercise to practice English vowels.</p>
 
-  <a class="lesson" href="1.%20Common_words_u.html">
-    1. Common Words – /uː/
-  </a>
+    <h1>🎧 Session 6</h1>
+    <p class="subtitle">Pronunciation Practice — Choose a lesson to begin</p>
 
-  <a class="lesson" href="2.%20Common_words_o.html">
-    2. Common Words – /ʊ/
-  </a>
+    <div class="lesson-list">
 
-  <a class="lesson" href="3.%20Common_words_o.html">
-    3. Common Words – /ɒ/
-  </a>
+        <a class="lesson" href="./1.%20Common_words_u.html">
+            <div class="number">01</div>
+            <div class="lesson-info">
+                <div class="lesson-title">Common Words — Sound /ʊ/</div>
+                <div class="filename">1. Common_words_u.html</div>
+            </div>
+            <div class="arrow">›</div>
+        </a>
 
-  <a class="lesson" href="4.%20Common_words_ɔ.html">
-    4. Common Words – /ɔː/
-  </a>
+        <a class="lesson" href="./2.%20Common_words_%C9%99.html">
+            <div class="number">02</div>
+            <div class="lesson-info">
+                <div class="lesson-title">Common Words — Sound /ə/</div>
+                <div class="filename">2. Common_words_ə.html</div>
+            </div>
+            <div class="arrow">›</div>
+        </a>
 
-  <a class="back" href="../index.html">
-    ← Back to all sessions
-  </a>
+        <a class="lesson" href="./3.%20Common_words_o.html">
+            <div class="number">03</div>
+            <div class="lesson-info">
+                <div class="lesson-title">Common Words — Sound /ɒ/</div>
+                <div class="filename">3. Common_words_o.html</div>
+            </div>
+            <div class="arrow">›</div>
+        </a>
+
+        <a class="lesson" href="./4.%20Common_words_%C9%94.html">
+            <div class="number">04</div>
+            <div class="lesson-info">
+                <div class="lesson-title">Common Words — Sound /ɔ/</div>
+                <div class="filename">4. Common_words_ɔ.html</div>
+            </div>
+            <div class="arrow">›</div>
+        </a>
+
+    </div>
+
+    <footer>
+        Pronunciation Practice · Session 6
+    </footer>
+
 </body>
 </html>
+```
