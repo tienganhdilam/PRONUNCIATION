@@ -1,11 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Session 16 - TIẾNG ANH DÌ LAM</title>
+<title>Session 16 | TIẾNG ANH DÌ LAM</title>
 
 <style>
 * {
@@ -14,146 +13,123 @@
 
 body {
     margin: 0;
-    padding: 35px 16px;
+    padding: 30px 16px 60px;
     font-family: Arial, Helvetica, sans-serif;
     background: #f5f8fc;
-    color: #202d43;
+    color: #24364b;
 }
 
 .container {
-    max-width: 780px;
-    margin: auto;
+    max-width: 740px;
+    margin: 0 auto;
 }
 
-/* BRAND */
-.brand {
+/* HEADER */
+header {
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 38px;
 }
 
-.brand-name {
+.brand {
+    color: #477fbd;
     font-size: 34px;
     font-weight: 800;
-    color: #477fbd;
     letter-spacing: 1px;
-    margin: 0 0 5px;
+    margin-bottom: 6px;
 }
 
-.course-name {
+.course {
+    color: #477fbd;
     font-size: 17px;
     font-weight: 700;
-    color: #477fbd;
+}
+
+/* SESSION TITLE */
+.session {
+    margin-bottom: 24px;
+}
+
+.session h2 {
+    font-size: 23px;
+    margin: 0 0 8px;
+    color: #263c55;
+}
+
+.session p {
+    color: #71849a;
+    font-size: 16px;
+    line-height: 1.6;
     margin: 0;
 }
 
-/* SESSION */
-.session-title {
-    text-align: center;
-    font-size: 21px;
-    font-weight: 700;
-    color: #263b5e;
-    margin: 0 0 8px;
-}
-
-.subtitle {
-    text-align: center;
-    color: #667386;
-    font-size: 15px;
-    margin: 0 0 30px;
-}
-
-/* LESSON */
-.lesson {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    background: #ffffff;
-    padding: 20px 22px;
-    margin-bottom: 16px;
-    border-radius: 15px;
-    border: 1px solid #e3e8ef;
+/* ACTIVITY CARDS */
+.activity {
+    display: block;
     text-decoration: none;
-    color: #202d43;
-    transition: 0.2s;
+    background: #ffffff;
+    border: 1px solid #dce6f1;
+    border-left: 5px solid #91b9e8;
+    border-radius: 15px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+    box-shadow: 0 3px 12px rgba(40, 75, 110, 0.05);
+    transition: 0.2s ease;
 }
 
-.lesson:hover {
-    border-color: #9b642b;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+.activity:hover {
+    transform: translateY(-3px);
+    border-left-color: #477fbd;
+    box-shadow: 0 7px 20px rgba(40, 75, 110, 0.12);
 }
 
 .number {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    border-radius: 50%;
-    background: #263b5e;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 17px;
+    color: #6596cb;
+    font-size: 13px;
     font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 9px;
 }
 
-.lesson-info {
-    flex: 1;
+.activity h3 {
+    color: #263c55;
+    font-size: 19px;
+    margin: 0 0 9px;
 }
 
-.lesson-info h3 {
-    font-size: 17px;
-    margin: 0 0 6px;
-    font-weight: 700;
-}
-
-.lesson-info p {
+.activity p {
+    color: #71849a;
     font-size: 14px;
-    color: #667386;
+    line-height: 1.6;
     margin: 0;
-    line-height: 1.5;
 }
 
-.arrow {
-    color: #a76b35;
-    font-size: 23px;
-}
-
-/* BACK */
-.back {
-    display: block;
-    text-align: center;
-    margin-top: 32px;
-    color: #667386;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.back:hover {
+.open {
+    display: inline-block;
     color: #477fbd;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
 }
 
-/* MOBILE */
-@media (max-width: 480px) {
-    .brand-name {
+/* FOOTER */
+footer {
+    text-align: center;
+    color: #91a0b2;
+    font-size: 13px;
+    margin-top: 42px;
+}
+
+@media (max-width: 600px) {
+    .brand {
         font-size: 27px;
     }
 
-    .course-name {
-        font-size: 15px;
+    .session h2 {
+        font-size: 21px;
     }
 
-    .lesson {
-        padding: 16px;
-        gap: 12px;
-    }
-
-    .lesson-info h3 {
-        font-size: 15px;
-    }
-
-    .lesson-info p {
-        font-size: 12px;
+    .activity {
+        padding: 19px;
     }
 }
 </style>
@@ -163,57 +139,57 @@ body {
 
 <div class="container">
 
-    <!-- BRAND -->
-    <header class="brand">
-        <h1 class="brand-name">TIẾNG ANH DÌ LAM</h1>
-        <h2 class="course-name">PRONUNCIATION COURSE</h2>
+    <header>
+        <div class="brand">TIẾNG ANH DÌ LAM</div>
+        <div class="course">PRONUNCIATION COURSE</div>
     </header>
 
-    <!-- SESSION TITLE -->
-    <h2 class="session-title">
-        SESSION 16 – PRACTICE
-    </h2>
+    <section class="session">
+        <h2>SESSION 16</h2>
+        <p>
+            Listening, IPA Recognition & Speaking Practice
+        </p>
+    </section>
 
-    <p class="subtitle">
-        Listening & Speaking Practice
-    </p>
-
-    <!-- LESSON 1 -->
-    <a class="lesson"
+    <!-- ACTIVITY 1 -->
+    <a class="activity"
        href="1.circle_of_life_ipa_choice_practice.html">
 
-        <div class="number">1</div>
+        <div class="number">ACTIVITY 01</div>
 
-        <div class="lesson-info">
-            <h3>IPA Choice Practice</h3>
-            <p>
-                Listen and choose the correct IPA transcription.
-            </p>
-        </div>
+        <h3>Circle of Life – IPA Choice Practice</h3>
 
-        <div class="arrow">→</div>
+        <p>
+            Listen to the words and choose the correct
+            IPA transcription.
+        </p>
+
+        <span class="open">Start practicing →</span>
+
     </a>
 
-    <!-- LESSON 2 -->
-    <a class="lesson"
+    <!-- ACTIVITY 2 -->
+    <a class="activity"
        href="2.lion_king_circle_of_life_practice_v25.html">
 
-        <div class="number">2</div>
+        <div class="number">ACTIVITY 02</div>
 
-        <div class="lesson-info">
-            <h3>The Lion King – Circle of Life</h3>
-            <p>
-                Listening and pronunciation practice.
-            </p>
-        </div>
+        <h3>The Lion King (2019) – Circle of Life</h3>
 
-        <div class="arrow">→</div>
+        <p>
+            Mufasa explains the Circle of Life.
+            Listening & Speaking Practice.
+        </p>
+
+        <span class="open">Start practicing →</span>
+
     </a>
 
-    <!-- BACK -->
-    <a class="back" href="../index.html">
-        ← Back to Sessions
-    </a>
+    <footer>
+        TIẾNG ANH DÌ LAM
+        <br>
+        Learn • Practice • Improve
+    </footer>
 
 </div>
 
