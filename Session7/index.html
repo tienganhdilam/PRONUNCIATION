@@ -2,71 +2,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Session 7 - Pronunciation Practice</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 7 - Pronunciation Course</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background: #f4f7fb;
-      color: #243047;
-    }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-    h1 {
-      text-align: center;
-      color: #2457a7;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #202735;
+    margin: 0;
+    padding: 30px 16px;
+}
 
-    p {
-      text-align: center;
-    }
+.container {
+    max-width: 750px;
+    margin: auto;
+}
 
-    .lesson {
-      display: block;
-      background: white;
-      padding: 20px;
-      margin: 16px 0;
-      border-radius: 12px;
-      text-decoration: none;
-      color: #2457a7;
-      font-size: 18px;
-      font-weight: bold;
-      border: 1px solid #dce5f2;
-    }
+h1 {
+    text-align: center;
+    color: #263b5e;
+    margin-bottom: 8px;
+}
 
-    .lesson:hover {
-      background: #e8f0ff;
-    }
+.subtitle {
+    text-align: center;
+    color: #667386;
+    margin-bottom: 30px;
+}
 
-    .back {
-      display: inline-block;
-      margin-top: 20px;
-      color: #2457a7;
-      text-decoration: none;
-    }
-  </style>
+.lesson {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 14px;
+    border: 1px solid #e3e8ef;
+    text-decoration: none;
+    color: #202735;
+    transition: 0.2s;
+}
+
+.lesson:hover {
+    border-color: #9b642b;
+    transform: translateY(-2px);
+}
+
+.number {
+    background: #263b5e;
+    color: white;
+    min-width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.lesson h2 {
+    font-size: 17px;
+    margin: 0 0 6px;
+}
+
+.lesson p {
+    font-size: 13px;
+    color: #667386;
+    margin: 0;
+}
+
+.arrow {
+    margin-left: auto;
+    color: #9b642b;
+    font-size: 22px;
+}
+
+.back {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #667386;
+    text-decoration: none;
+    font-size: 14px;
+}
+</style>
 </head>
 
 <body>
 
-  <h1>SESSION 7</h1>
+<div class="container">
 
-  <p>Welcome to Session 7!</p>
-  <p>Choose an exercise to start practicing.</p>
+    <h1>PRONUNCIATION COURSE</h1>
+    <p class="subtitle">SESSION 7 – PRACTICE</p>
 
-  <a class="lesson" href="lion_king_circle_of_life_practice_updated.html">
-    1. The Lion King – Circle of Life
-  </a>
-
-  <p>
-    <a class="back" href="../index.html">
-      ← Back to all sessions
+    <a class="lesson"
+       href="1.circle_of_life_ipa_choice_practice.html">
+        <div class="number">1</div>
+        <div>
+            <h2>IPA Choice Practice</h2>
+            <p>Listen and choose the correct IPA transcription.</p>
+        </div>
+        <div class="arrow">→</div>
     </a>
-  </p>
+
+    <a class="lesson"
+       href="2.lion_king_circle_of_life_practice_v25.html">
+        <div class="number">2</div>
+        <div>
+            <h2>The Lion King – Circle of Life</h2>
+            <p>Listening and pronunciation practice.</p>
+        </div>
+        <div class="arrow">→</div>
+    </a>
+
+    <a class="back" href="../index.html">
+        ← Back to Sessions
+    </a>
+
+</div>
 
 </body>
 </html>
