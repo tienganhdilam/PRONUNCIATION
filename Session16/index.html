@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Session 16 - Pronunciation Course</title>
+<title>Session 16 - TIẾNG ANH DÌ LAM</title>
 
 <style>
 * {
@@ -13,110 +13,117 @@
 }
 
 body {
+    margin: 0;
+    padding: 35px 16px;
     font-family: Arial, Helvetica, sans-serif;
     background: #f5f8fc;
-    color: #202735;
-    margin: 0;
-    padding: 30px 16px;
+    color: #202d43;
 }
 
 .container {
-    max-width: 750px;
+    max-width: 780px;
     margin: auto;
 }
 
-/* BRAND HEADER */
+/* BRAND */
 .brand {
     text-align: center;
-    margin-bottom: 42px;
+    margin-bottom: 48px;
 }
 
-.brand h1 {
-    color: #477fbd;
+.brand-name {
     font-size: 34px;
     font-weight: 800;
+    color: #477fbd;
     letter-spacing: 1px;
     margin: 0 0 5px;
 }
 
-.brand h2 {
-    color: #477fbd;
+.course-name {
     font-size: 17px;
     font-weight: 700;
+    color: #477fbd;
     margin: 0;
 }
 
-/* SESSION TITLE */
+/* SESSION */
 .session-title {
     text-align: center;
-    color: #263b5e;
     font-size: 21px;
     font-weight: 700;
-    margin-bottom: 8px;
+    color: #263b5e;
+    margin: 0 0 8px;
 }
 
 .subtitle {
     text-align: center;
     color: #667386;
-    font-size: 14px;
-    margin-bottom: 28px;
+    font-size: 15px;
+    margin: 0 0 30px;
 }
 
-/* LESSON CARDS */
+/* LESSON */
 .lesson {
     display: flex;
     align-items: center;
     gap: 16px;
-    background: white;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 14px;
+    background: #ffffff;
+    padding: 20px 22px;
+    margin-bottom: 16px;
+    border-radius: 15px;
     border: 1px solid #e3e8ef;
     text-decoration: none;
-    color: #202735;
+    color: #202d43;
     transition: 0.2s;
 }
 
 .lesson:hover {
     border-color: #9b642b;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .number {
-    background: #477fbd;
-    color: white;
-    min-width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
     border-radius: 50%;
+    background: #263b5e;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 17px;
     font-weight: bold;
 }
 
-.lesson h3 {
-    font-size: 17px;
-    margin: 0 0 6px;
+.lesson-info {
+    flex: 1;
 }
 
-.lesson p {
-    font-size: 13px;
+.lesson-info h3 {
+    font-size: 17px;
+    margin: 0 0 6px;
+    font-weight: 700;
+}
+
+.lesson-info p {
+    font-size: 14px;
     color: #667386;
     margin: 0;
     line-height: 1.5;
 }
 
 .arrow {
-    margin-left: auto;
-    color: #477fbd;
-    font-size: 22px;
+    color: #a76b35;
+    font-size: 23px;
 }
 
+/* BACK */
 .back {
     display: block;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 32px;
     color: #667386;
     text-decoration: none;
     font-size: 14px;
@@ -128,20 +135,25 @@ body {
 
 /* MOBILE */
 @media (max-width: 480px) {
-    .brand h1 {
+    .brand-name {
         font-size: 27px;
     }
 
-    .brand h2 {
+    .course-name {
         font-size: 15px;
     }
 
     .lesson {
         padding: 16px;
+        gap: 12px;
     }
 
-    .lesson h3 {
+    .lesson-info h3 {
         font-size: 15px;
+    }
+
+    .lesson-info p {
+        font-size: 12px;
     }
 }
 </style>
@@ -151,40 +163,54 @@ body {
 
 <div class="container">
 
+    <!-- BRAND -->
     <header class="brand">
-        <h1>TIẾNG ANH DÌ LAM</h1>
-        <h2>PRONUNCIATION COURSE</h2>
+        <h1 class="brand-name">TIẾNG ANH DÌ LAM</h1>
+        <h2 class="course-name">PRONUNCIATION COURSE</h2>
     </header>
 
-    <h2 class="session-title">SESSION 16</h2>
-    <p class="subtitle">Listening & Speaking Practice</p>
+    <!-- SESSION TITLE -->
+    <h2 class="session-title">
+        SESSION 16 – PRACTICE
+    </h2>
 
+    <p class="subtitle">
+        Listening & Speaking Practice
+    </p>
+
+    <!-- LESSON 1 -->
     <a class="lesson"
        href="1.circle_of_life_ipa_choice_practice.html">
 
         <div class="number">1</div>
 
-        <div>
+        <div class="lesson-info">
             <h3>IPA Choice Practice</h3>
-            <p>Listen and choose the correct IPA transcription.</p>
+            <p>
+                Listen and choose the correct IPA transcription.
+            </p>
         </div>
 
         <div class="arrow">→</div>
     </a>
 
+    <!-- LESSON 2 -->
     <a class="lesson"
        href="2.lion_king_circle_of_life_practice_v25.html">
 
         <div class="number">2</div>
 
-        <div>
+        <div class="lesson-info">
             <h3>The Lion King – Circle of Life</h3>
-            <p>Listening and pronunciation practice.</p>
+            <p>
+                Listening and pronunciation practice.
+            </p>
         </div>
 
         <div class="arrow">→</div>
     </a>
 
+    <!-- BACK -->
     <a class="back" href="../index.html">
         ← Back to Sessions
     </a>
