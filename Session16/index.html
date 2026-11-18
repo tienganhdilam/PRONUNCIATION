@@ -4,7 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Session 7 - Pronunciation Course</title>
+
+<title>Session 16 - Pronunciation Course</title>
 
 <style>
 * {
@@ -12,8 +13,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8fc;
     color: #202735;
     margin: 0;
     padding: 30px 16px;
@@ -24,18 +25,44 @@ body {
     margin: auto;
 }
 
-h1 {
+/* BRAND HEADER */
+.brand {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.brand h1 {
+    color: #477fbd;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0 0 5px;
+}
+
+.brand h2 {
+    color: #477fbd;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* SESSION TITLE */
+.session-title {
     text-align: center;
     color: #263b5e;
+    font-size: 21px;
+    font-weight: 700;
     margin-bottom: 8px;
 }
 
 .subtitle {
     text-align: center;
     color: #667386;
-    margin-bottom: 30px;
+    font-size: 14px;
+    margin-bottom: 28px;
 }
 
+/* LESSON CARDS */
 .lesson {
     display: flex;
     align-items: center;
@@ -53,10 +80,11 @@ h1 {
 .lesson:hover {
     border-color: #9b642b;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .number {
-    background: #263b5e;
+    background: #477fbd;
     color: white;
     min-width: 42px;
     height: 42px;
@@ -67,7 +95,7 @@ h1 {
     font-weight: bold;
 }
 
-.lesson h2 {
+.lesson h3 {
     font-size: 17px;
     margin: 0 0 6px;
 }
@@ -76,11 +104,12 @@ h1 {
     font-size: 13px;
     color: #667386;
     margin: 0;
+    line-height: 1.5;
 }
 
 .arrow {
     margin-left: auto;
-    color: #9b642b;
+    color: #477fbd;
     font-size: 22px;
 }
 
@@ -92,6 +121,29 @@ h1 {
     text-decoration: none;
     font-size: 14px;
 }
+
+.back:hover {
+    color: #477fbd;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .brand h1 {
+        font-size: 27px;
+    }
+
+    .brand h2 {
+        font-size: 15px;
+    }
+
+    .lesson {
+        padding: 16px;
+    }
+
+    .lesson h3 {
+        font-size: 15px;
+    }
+}
 </style>
 </head>
 
@@ -99,26 +151,37 @@ h1 {
 
 <div class="container">
 
-    <h1>PRONUNCIATION COURSE</h1>
-    <p class="subtitle">SESSION 7 – PRACTICE</p>
+    <header class="brand">
+        <h1>TIẾNG ANH DÌ LAM</h1>
+        <h2>PRONUNCIATION COURSE</h2>
+    </header>
+
+    <h2 class="session-title">SESSION 16</h2>
+    <p class="subtitle">Listening & Speaking Practice</p>
 
     <a class="lesson"
        href="1.circle_of_life_ipa_choice_practice.html">
+
         <div class="number">1</div>
+
         <div>
-            <h2>IPA Choice Practice</h2>
+            <h3>IPA Choice Practice</h3>
             <p>Listen and choose the correct IPA transcription.</p>
         </div>
+
         <div class="arrow">→</div>
     </a>
 
     <a class="lesson"
        href="2.lion_king_circle_of_life_practice_v25.html">
+
         <div class="number">2</div>
+
         <div>
-            <h2>The Lion King – Circle of Life</h2>
+            <h3>The Lion King – Circle of Life</h3>
             <p>Listening and pronunciation practice.</p>
         </div>
+
         <div class="arrow">→</div>
     </a>
 
