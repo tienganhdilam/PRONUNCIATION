@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Lion King – Circle of Life</title>
+<style>
+:root{--ink:#202735;--muted:#667386;--line:#e3e8ef;--accent:#9b642b;--soft:#f8f2ea}
+*{box-sizing:border-box}
+body{margin:0;background:#f5f7fa;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
+main{max-width:900px;margin:auto;padding:22px 16px 48px}
+h1{font-size:clamp(24px,4vw,34px);margin:0 0 5px;line-height:1.2}
+.sub{margin:0 0 18px;color:var(--muted)}
+.video{position:relative;aspect-ratio:16/9;background:#111;border-radius:15px;overflow:hidden}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.source{font-size:13px;color:var(--muted);margin:8px 1px 22px}
+.source a{color:#87551f}
+.instructions{font-size:14px;color:var(--muted);margin:0 0 13px}
+.sentences{display:grid;gap:12px}
+.sentence{background:white;border:1px solid var(--line);border-radius:13px;padding:17px;cursor:pointer;transition:.15s}
+.sentence:hover{border-color:#c8a47c}
+.sentence.active{border-color:var(--accent);box-shadow:0 0 0 3px #9b642b18}
+.line{font-size:19px;line-height:1.9}
+.word{display:inline;border:0;background:transparent;color:inherit;font:inherit;line-height:inherit;padding:0 1px;border-radius:4px;cursor:pointer}
+.word:hover,.word:focus-visible{background:var(--soft);outline:none;color:#754719}
+.word.selected{background:#f3e7d7;color:#754719}
+.info{display:none;margin-top:13px;padding:11px 13px;border-top:1px solid var(--line);background:#fffdfa;border-radius:0 0 9px 9px;cursor:default}
+.info.show{display:block}
+.info-word{font-weight:700;font-size:17px}
+.info-ipa{color:#87551f;font-size:16px;margin:2px 0}
+.info-meaning{color:var(--muted);font-size:14px}
+.note{font-size:12px;color:var(--muted);margin-top:22px}
+@media(max-width:560px){main{padding:17px 12px 35px}.sentence{padding:13px}.line{font-size:17px}}
+</style>
+</head>
+<body>
+<main>
+<h1>The Lion King (2019)</h1>
+<p class="sub">Mufasa explains the Circle of Life</p>
+<div class="video">
+<iframe src="https://www.youtube.com/embed/QI59SzShy_Y" title="The Lion King – Circle of Life" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<p class="source"> <a href="https://www.youtube.com/watch?v=QI59SzShy_Y" target="_blank" rel="noopener">Open video on YouTube</a></p>
+<p class="instructions">Bấm vào câu để nghe toàn câu. Bấm vào từng từ để nghe riêng từ đó, xem phiên âm IPA và nghĩa tiếng Việt.</p>
+
+<section class="sentences" id="sentences">
+  <article class="sentence" data-sentence="Everything you see exists together in a delicate balance.">
+    <div class="line"></div><div class="info"></div>
+  </article>
+  <article class="sentence" data-sentence="As king, you need to understand that balance and respect all the creatures, from the crawling ant to the leaping antelope.">
+    <div class="line"></div><div class="info"></div>
+  </article>
+  <article class="sentence" data-sentence="But, Dad, don't we eat the antelope?">
+    <div class="line"></div><div class="info"></div>
+  </article>
+  <article class="sentence" data-sentence="Yes, Simba. But let me explain.">
+    <div class="line"></div><div class="info"></div>
+  </article>
+  <article class="sentence" data-sentence="When we die, our bodies become the grass, and the antelope eat the grass, and so we are all connected in the great Circle of Life.">
+    <div class="line"></div><div class="info"></div>
+  </article>
+</section>
+<p class="note">IPA theo cách phát âm General American. Nghĩa tiếng Việt được giải thích theo ngữ cảnh trong đoạn phim. Âm thanh phát lại sử dụng giọng tổng hợp English (US) của trình duyệt, không phải giọng gốc trong phim.</p>
+</main>
+<script>
+const lex = {
+"everything":["/ˈɛvriˌθɪŋ/","mọi thứ"],"you":["/juː/","con / bạn"],"see":["/siː/","nhìn thấy"],"exists":["/ɪɡˈzɪsts/","tồn tại"],"together":["/təˈɡɛðər/","cùng nhau"],"in":["/ɪn/","trong"],"a":["/ə/","một"],"delicate":["/ˈdɛlɪkət/","mong manh; tinh tế"],"balance":["/ˈbæləns/","sự cân bằng"],
+"as":["/æz/","với tư cách là"],"king":["/kɪŋ/","nhà vua"],"need":["/niːd/","cần"],"to":["/tə/","để; (trợ từ nguyên mẫu)"],"understand":["/ˌʌndərˈstænd/","hiểu"],"that":["/ðæt/","đó"],"and":["/ænd/","và"],"respect":["/rɪˈspɛkt/","tôn trọng"],"all":["/ɔːl/","tất cả"],"the":["/ðə/","(mạo từ xác định)"],"creatures":["/ˈkriːtʃərz/","các sinh vật"],"from":["/frəm/","từ"],"crawling":["/ˈkrɔːlɪŋ/","đang bò"],"ant":["/ænt/","con kiến"],"leaping":["/ˈliːpɪŋ/","đang nhảy"],"antelope":["/ˈæntəˌloʊp/","linh dương"],
+"but":["/bət/","nhưng"],"dad":["/dæd/","bố"],"don't":["/doʊnt/","không (dạng phủ định)"],"we":["/wiː/","chúng ta"],"eat":["/iːt/","ăn"],"yes":["/jɛs/","đúng vậy"],"simba":["/ˈsɪmbə/","Simba (tên riêng)"],"let":["/lɛt/","hãy; để"],"me":["/miː/","bố / tôi"],"explain":["/ɪkˈspleɪn/","giải thích"],
+"when":["/wɛn/","khi"],"die":["/daɪ/","chết"],"our":["/aʊər/","của chúng ta"],"bodies":["/ˈbɑːdiz/","cơ thể"],"become":["/bɪˈkʌm/","trở thành"],"grass":["/ɡræs/","cỏ"],"so":["/soʊ/","vì vậy"],"are":["/ər/","là; thì; ở"],"connected":["/kəˈnɛktɪd/","được kết nối"],"great":["/ɡreɪt/","vĩ đại"],"circle":["/ˈsɜːrkəl/","vòng tròn; vòng tuần hoàn"],"of":["/əv/","của"],"life":["/laɪf/","sự sống; cuộc sống"]
+};
+const synth=window.speechSynthesis; let voices=[];
+function refreshVoices(){voices=synth?synth.getVoices():[]}
+if(synth){refreshVoices();synth.onvoiceschanged=refreshVoices}
+function speak(text){
+ if(!synth){alert("Trình duyệt chưa hỗ trợ đọc văn bản.");return}
+ synth.cancel();
+ const u=new SpeechSynthesisUtterance(text);u.lang="en-US";u.rate=.88;u.pitch=1;
+ const v=voices.find(x=>x.lang&&x.lang.toLowerCase()==="en-us");if(v)u.voice=v;
+ synth.speak(u);
+}
+function cleanToken(t){return t.toLowerCase().replace(/^[^a-z']+|[^a-z']+$/g,"")}
+document.querySelectorAll(".sentence").forEach(card=>{
+ const line=card.querySelector(".line"), info=card.querySelector(".info");
+ const sentence=card.dataset.sentence;
+ const tokens=sentence.match(/[A-Za-z]+(?:'[A-Za-z]+)?|[^A-Za-z]+/g)||[];
+ tokens.forEach(token=>{
+   if(/^[A-Za-z]/.test(token)){
+     const b=document.createElement("button");b.className="word";b.type="button";b.textContent=token;
+     b.addEventListener("click",e=>{
+       e.stopPropagation();
+       card.querySelectorAll(".word").forEach(w=>w.classList.remove("selected"));
+       b.classList.add("selected");
+       const key=cleanToken(token), data=lex[key]||["IPA chưa được bổ sung","Nghĩa theo ngữ cảnh"];
+       info.innerHTML='<div class="info-word"></div><div class="info-ipa"></div><div class="info-meaning"></div>';
+       info.querySelector(".info-word").textContent=token;
+       info.querySelector(".info-ipa").textContent=data[0];
+       info.querySelector(".info-meaning").textContent=data[1];
+       info.classList.add("show");
+       speak(token);
+     });
+     line.appendChild(b);
+   } else line.appendChild(document.createTextNode(token));
+ });
+ card.addEventListener("click",()=>{card.classList.add("active");speak(sentence);});
+});
+if(synth)synth.addEventListener;
+</script>
+</body>
+</html>
