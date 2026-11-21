@@ -17,176 +17,160 @@ body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: #f3f7fd;
-    color: #29394b;
+    color: #29394d;
 }
 
 .container {
-    width: 100%;
     max-width: 760px;
     margin: auto;
-    padding: 28px 27px 55px;
+    padding: 45px 27px 70px;
 }
 
-/* BRAND BANNER */
+/* HEADER */
 
-.banner {
-    background: linear-gradient(
-        120deg,
-        #174765 0%,
-        #1d607c 55%,
-        #247b91 100%
-    );
-
-    border-radius: 38px;
-    padding: 75px 20px;
+.header {
     text-align: center;
-    margin-bottom: 55px;
-    box-shadow: 0 8px 22px rgba(23, 71, 101, 0.12);
+    margin-bottom: 65px;
 }
 
-.brand-title {
-    color: #f5c75e;
-    font-size: 34px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin: 0 0 30px;
-    line-height: 1.3;
-}
-
-.course-title {
-    color: #ffffff;
-    font-size: 25px;
-    line-height: 1.4;
-    font-weight: 600;
+.brand {
+    color: #5685b8;
+    font-size: 38px;
+    font-weight: 800;
     letter-spacing: 1px;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
-/* SESSION INFORMATION */
-
-.session-info {
-    margin-bottom: 43px;
+.course {
+    color: #5685b8;
+    font-size: 28px;
+    font-weight: 600;
 }
 
-.session-info h2 {
+/* SESSION TITLE */
+
+.session {
+    margin-bottom: 46px;
+}
+
+.session h1 {
     font-size: 30px;
-    margin: 0 0 18px;
+    margin: 0 0 20px;
     font-weight: 700;
-    color: #29394b;
 }
 
-.session-info p {
-    font-size: 21px;
-    line-height: 1.6;
+.session p {
+    font-size: 25px;
+    line-height: 1.5;
     color: #84909e;
     margin: 0;
 }
 
 /* ACTIVITY CARDS */
 
-.activities {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
 .activity {
-    display: block;
     background: #ffffff;
-    border: 1px solid #dce4ed;
-    border-left: 8px solid #91b6e2;
+    border: 1px solid #dce3ed;
+    border-left: 8px solid #8bb5e1;
     border-radius: 25px;
-    padding: 30px 32px;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: 0 4px 12px rgba(30, 60, 90, 0.05);
+    padding: 34px 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.04);
     transition: 0.2s;
 }
 
-.activity:active {
-    transform: scale(0.985);
+.activity:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
-.activity-label {
-    color: #7299c0;
-    font-size: 19px;
+.number {
+    color: #7099c2;
+    font-size: 21px;
     font-weight: 700;
     letter-spacing: 1px;
-    margin-bottom: 17px;
+    margin-bottom: 15px;
 }
 
-.activity h3 {
-    font-size: 24px;
-    line-height: 1.4;
-    color: #29394b;
-    margin: 0 0 14px;
-    font-weight: 700;
+.activity h2 {
+    font-size: 29px;
+    line-height: 1.35;
+    margin: 0 0 17px;
+    color: #29394d;
 }
 
 .description {
-    font-size: 19px;
-    line-height: 1.8;
+    font-size: 23px;
+    line-height: 1.65;
     color: #87919e;
-    margin: 0 0 25px;
+    margin: 0 0 28px;
 }
 
-.start {
-    font-size: 19px;
+.activity a {
+    display: inline-block;
+    color: #527fae;
+    font-size: 21px;
     font-weight: 700;
-    color: #5781ac;
+    text-decoration: none;
+}
+
+.activity a:hover {
+    color: #285d95;
+    text-decoration: underline;
 }
 
 /* FOOTER */
 
 .footer {
     text-align: center;
-    margin-top: 70px;
-    color: #9aa5b1;
-    font-size: 18px;
-    line-height: 1.7;
+    margin-top: 75px;
+    color: #929daa;
+    font-size: 19px;
+    line-height: 1.5;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
-@media (max-width: 480px) {
-
+@media (max-width: 600px) {
     .container {
-        padding: 22px 27px 50px;
+        padding: 50px 27px 65px;
     }
 
-    .banner {
-        padding: 65px 15px;
-        border-radius: 32px;
-        margin-bottom: 45px;
+    .brand {
+        font-size: 34px;
     }
 
-    .brand-title {
+    .course {
+        font-size: 27px;
+    }
+
+    .header {
+        margin-bottom: 65px;
+    }
+
+    .session h1 {
         font-size: 30px;
-        margin-bottom: 28px;
     }
 
-    .course-title {
-        font-size: 23px;
-    }
-
-    .session-info h2 {
-        font-size: 28px;
-    }
-
-    .session-info p {
-        font-size: 19px;
+    .session p {
+        font-size: 25px;
     }
 
     .activity {
-        padding: 28px 27px;
+        padding: 32px 32px;
+        margin-bottom: 32px;
     }
 
-    .activity h3 {
-        font-size: 22px;
+    .activity h2 {
+        font-size: 28px;
     }
 
     .description {
-        font-size: 18px;
+        font-size: 23px;
+    }
+
+    .activity a {
+        font-size: 21px;
     }
 }
 </style>
@@ -196,121 +180,69 @@ body {
 
 <div class="container">
 
-    <!-- BRAND BANNER -->
-
-    <header class="banner">
-
-        <h1 class="brand-title">
-            TIẾNG ANH DÌ LAM
-        </h1>
-
-        <h2 class="course-title">
-            PRONUNCIATION COURSE
-        </h2>
-
+    <!-- HEADER -->
+    <header class="header">
+        <div class="brand">TIẾNG ANH DÌ LAM</div>
+        <div class="course">PRONUNCIATION COURSE</div>
     </header>
 
-
-    <!-- SESSION INFORMATION -->
-
-    <section class="session-info">
-
-        <h2>SESSION 16</h2>
-
-        <p>
-            Listening, IPA Recognition &amp; Speaking Practice
-        </p>
-
+    <!-- SESSION -->
+    <section class="session">
+        <h1>SESSION 16</h1>
+        <p>Listening, IPA Recognition &amp; Speaking Practice</p>
     </section>
 
+    <!-- ACTIVITY 01 -->
+    <div class="activity">
+        <div class="number">ACTIVITY 01</div>
 
-    <!-- LEARNING ACTIVITIES -->
+        <h2>Circle of Life – IPA Choice Practice</h2>
 
-    <main class="activities">
+        <p class="description">
+            Listen to the words and choose the correct IPA transcription.
+        </p>
 
-        <!-- ACTIVITY 01 -->
-
-        <a class="activity"
-           href="1.circle_of_life_ipa_choice_practice.html">
-
-            <div class="activity-label">
-                ACTIVITY 01
-            </div>
-
-            <h3>
-                Circle of Life – IPA Choice Practice
-            </h3>
-
-            <p class="description">
-                Listen to the words and choose the correct IPA transcription.
-            </p>
-
-            <div class="start">
-                Start practicing →
-            </div>
-
+        <a href="1.circle_of_life_ipa_choice_practice.html">
+            Start practicing →
         </a>
+    </div>
 
+    <!-- ACTIVITY 02 -->
+    <div class="activity">
+        <div class="number">ACTIVITY 02</div>
 
-        <!-- ACTIVITY 02 -->
+        <h2>The Lion King (2019) – Circle of Life</h2>
 
-        <a class="activity"
-           href="2.lion_king_circle_of_life_practice.html">
+        <p class="description">
+            Mufasa explains the Circle of Life.
+            Listening &amp; Speaking Practice.
+        </p>
 
-            <div class="activity-label">
-                ACTIVITY 02
-            </div>
-
-            <h3>
-                The Lion King (2019) – Circle of Life
-            </h3>
-
-            <p class="description">
-                Mufasa explains the Circle of Life.
-                Listening &amp; Speaking Practice.
-            </p>
-
-            <div class="start">
-                Start practicing →
-            </div>
-
+        <a href="2.lion_king_circle_of_life_practice.html">
+            Start practicing →
         </a>
+    </div>
 
+    <!-- ACTIVITY 03 -->
+    <div class="activity">
+        <div class="number">ACTIVITY 03</div>
 
-        <!-- ACTIVITY 03 -->
+        <h2>Clear Speech – Speaking Practice</h2>
 
-        <a class="activity"
-           href="3._clear_speech.html">
+        <p class="description">
+            Practice clear speech, sentence stress,
+            rhythm and natural pronunciation.
+        </p>
 
-            <div class="activity-label">
-                ACTIVITY 03
-            </div>
-
-            <h3>
-                Clear Speech
-            </h3>
-
-            <p class="description">
-                Practice speaking clearly, naturally and confidently.
-            </p>
-
-            <div class="start">
-                Start practicing →
-            </div>
-
+        <a href="3._clear_speech.html">
+            Start practicing →
         </a>
-
-    </main>
-
+    </div>
 
     <!-- FOOTER -->
-
     <footer class="footer">
-
-        TIẾNG ANH DÌ LAM
-        <br>
+        TIẾNG ANH DÌ LAM<br>
         Learn · Practice · Improve
-
     </footer>
 
 </div>
