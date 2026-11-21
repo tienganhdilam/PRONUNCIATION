@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Session 16 | TIẾNG ANH DÌ LAM</title>
 
 <style>
@@ -13,119 +14,179 @@
 
 body {
     margin: 0;
-    padding: 30px 16px 60px;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f5f8fc;
-    color: #24364b;
+    background: #f3f7fd;
+    color: #29394b;
 }
 
 .container {
-    max-width: 740px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 760px;
+    margin: auto;
+    padding: 28px 27px 55px;
 }
 
-header {
+/* BRAND BANNER */
+
+.banner {
+    background: linear-gradient(
+        120deg,
+        #174765 0%,
+        #1d607c 55%,
+        #247b91 100%
+    );
+
+    border-radius: 38px;
+    padding: 75px 20px;
     text-align: center;
-    margin-bottom: 38px;
+    margin-bottom: 55px;
+    box-shadow: 0 8px 22px rgba(23, 71, 101, 0.12);
 }
 
-.brand {
-    color: #477fbd;
+.brand-title {
+    color: #f5c75e;
     font-size: 34px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    margin-bottom: 6px;
-}
-
-.course {
-    color: #477fbd;
-    font-size: 17px;
     font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0 0 30px;
+    line-height: 1.3;
 }
 
-.session {
-    margin-bottom: 24px;
-}
-
-.session h2 {
-    font-size: 23px;
-    margin: 0 0 8px;
-    color: #263c55;
-}
-
-.session p {
-    color: #71849a;
-    font-size: 16px;
-    line-height: 1.6;
+.course-title {
+    color: #ffffff;
+    font-size: 25px;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: 1px;
     margin: 0;
+}
+
+/* SESSION INFORMATION */
+
+.session-info {
+    margin-bottom: 43px;
+}
+
+.session-info h2 {
+    font-size: 30px;
+    margin: 0 0 18px;
+    font-weight: 700;
+    color: #29394b;
+}
+
+.session-info p {
+    font-size: 21px;
+    line-height: 1.6;
+    color: #84909e;
+    margin: 0;
+}
+
+/* ACTIVITY CARDS */
+
+.activities {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .activity {
     display: block;
-    text-decoration: none;
     background: #ffffff;
-    border: 1px solid #dce6f1;
-    border-left: 5px solid #91b9e8;
-    border-radius: 15px;
-    padding: 22px 24px;
-    margin-bottom: 18px;
-    box-shadow: 0 3px 12px rgba(40, 75, 110, 0.05);
-    transition: 0.2s ease;
+    border: 1px solid #dce4ed;
+    border-left: 8px solid #91b6e2;
+    border-radius: 25px;
+    padding: 30px 32px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 12px rgba(30, 60, 90, 0.05);
+    transition: 0.2s;
 }
 
-.activity:hover {
-    transform: translateY(-3px);
-    border-left-color: #477fbd;
-    box-shadow: 0 7px 20px rgba(40, 75, 110, 0.12);
+.activity:active {
+    transform: scale(0.985);
 }
 
-.number {
-    color: #6596cb;
-    font-size: 13px;
-    font-weight: bold;
+.activity-label {
+    color: #7299c0;
+    font-size: 19px;
+    font-weight: 700;
     letter-spacing: 1px;
-    margin-bottom: 9px;
+    margin-bottom: 17px;
 }
 
 .activity h3 {
-    color: #263c55;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #29394b;
+    margin: 0 0 14px;
+    font-weight: 700;
+}
+
+.description {
     font-size: 19px;
-    margin: 0 0 9px;
+    line-height: 1.8;
+    color: #87919e;
+    margin: 0 0 25px;
 }
 
-.activity p {
-    color: #71849a;
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0;
+.start {
+    font-size: 19px;
+    font-weight: 700;
+    color: #5781ac;
 }
 
-.open {
-    display: inline-block;
-    color: #477fbd;
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 15px;
-}
+/* FOOTER */
 
-footer {
+.footer {
     text-align: center;
-    color: #91a0b2;
-    font-size: 13px;
-    margin-top: 42px;
+    margin-top: 70px;
+    color: #9aa5b1;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
-@media (max-width: 600px) {
-    .brand {
-        font-size: 27px;
+/* RESPONSIVE */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 22px 27px 50px;
     }
 
-    .session h2 {
-        font-size: 21px;
+    .banner {
+        padding: 65px 15px;
+        border-radius: 32px;
+        margin-bottom: 45px;
+    }
+
+    .brand-title {
+        font-size: 30px;
+        margin-bottom: 28px;
+    }
+
+    .course-title {
+        font-size: 23px;
+    }
+
+    .session-info h2 {
+        font-size: 28px;
+    }
+
+    .session-info p {
+        font-size: 19px;
     }
 
     .activity {
-        padding: 19px;
+        padding: 28px 27px;
+    }
+
+    .activity h3 {
+        font-size: 22px;
+    }
+
+    .description {
+        font-size: 18px;
     }
 }
 </style>
@@ -135,73 +196,121 @@ footer {
 
 <div class="container">
 
-    <header>
-        <div class="brand">TIẾNG ANH DÌ LAM</div>
-        <div class="course">PRONUNCIATION COURSE</div>
+    <!-- BRAND BANNER -->
+
+    <header class="banner">
+
+        <h1 class="brand-title">
+            TIẾNG ANH DÌ LAM
+        </h1>
+
+        <h2 class="course-title">
+            PRONUNCIATION COURSE
+        </h2>
+
     </header>
 
-    <section class="session">
+
+    <!-- SESSION INFORMATION -->
+
+    <section class="session-info">
+
         <h2>SESSION 16</h2>
+
         <p>
-            Listening, IPA Recognition & Speaking Practice
+            Listening, IPA Recognition &amp; Speaking Practice
         </p>
+
     </section>
 
-    <!-- ACTIVITY 1 -->
-    <a class="activity"
-       href="1.circle_of_life_ipa_choice_practice.html">
 
-        <div class="number">ACTIVITY 01</div>
+    <!-- LEARNING ACTIVITIES -->
 
-        <h3>Circle of Life – IPA Choice Practice</h3>
+    <main class="activities">
 
-        <p>
-            Listen to the words and choose the correct
-            IPA transcription.
-        </p>
+        <!-- ACTIVITY 01 -->
 
-        <span class="open">Start practicing →</span>
+        <a class="activity"
+           href="1.circle_of_life_ipa_choice_practice.html">
 
-    </a>
+            <div class="activity-label">
+                ACTIVITY 01
+            </div>
 
-    <!-- ACTIVITY 2 -->
-    <a class="activity"
-       href="2.lion_king_circle_of_life_practice_v25.html">
+            <h3>
+                Circle of Life – IPA Choice Practice
+            </h3>
 
-        <div class="number">ACTIVITY 02</div>
+            <p class="description">
+                Listen to the words and choose the correct IPA transcription.
+            </p>
 
-        <h3>The Lion King (2019) – Circle of Life</h3>
+            <div class="start">
+                Start practicing →
+            </div>
 
-        <p>
-            Mufasa explains the Circle of Life.
-            Listening & Speaking Practice.
-        </p>
+        </a>
 
-        <span class="open">Start practicing →</span>
 
-    </a>
+        <!-- ACTIVITY 02 -->
 
-    <!-- ACTIVITY 3 -->
-    <a class="activity"
-       href="3._clear_speech.html">
+        <a class="activity"
+           href="2.lion_king_circle_of_life_practice.html">
 
-        <div class="number">ACTIVITY 03</div>
+            <div class="activity-label">
+                ACTIVITY 02
+            </div>
 
-        <h3>Clear Speech</h3>
+            <h3>
+                The Lion King (2019) – Circle of Life
+            </h3>
 
-        <p>
-            Listen, analyze pronunciation, and practice
-            clear and natural spoken English.
-        </p>
+            <p class="description">
+                Mufasa explains the Circle of Life.
+                Listening &amp; Speaking Practice.
+            </p>
 
-        <span class="open">Start practicing →</span>
+            <div class="start">
+                Start practicing →
+            </div>
 
-    </a>
+        </a>
 
-    <footer>
+
+        <!-- ACTIVITY 03 -->
+
+        <a class="activity"
+           href="3._clear_speech.html">
+
+            <div class="activity-label">
+                ACTIVITY 03
+            </div>
+
+            <h3>
+                Clear Speech
+            </h3>
+
+            <p class="description">
+                Practice speaking clearly, naturally and confidently.
+            </p>
+
+            <div class="start">
+                Start practicing →
+            </div>
+
+        </a>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
         TIẾNG ANH DÌ LAM
         <br>
-        Learn • Practice • Improve
+        Learn · Practice · Improve
+
     </footer>
 
 </div>
